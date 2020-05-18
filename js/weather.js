@@ -3,7 +3,17 @@ const COORDS = 'coords';
 const API_KEY = "66d632d1a097f94e3d72d426acdef5f6";
 
 function getWeather(lat, lon) {
-    fetch(`https://api.openweathermap.org/data/2.5/weather?lat=${lat}&lon=${lon}&appid=${API_KEY}`);
+    fetch(`https://api.openweathermap.org/data/2.5/weather?lat=${lat}&lon=${lon}&appid=${API_KEY}&units=metric`) // 서버에 요청
+    .then(function(response){ // 첫번째 인자는 response로 받는다 
+        return response.json(); 
+        // 요청에 대한 응답을 JSON형태로 파싱
+    })
+    .then(function(json) {
+        const temperature = json.main.temp;
+        const place = json.name;
+        weather.innerHTML = `${Math.floor(temperature)}℃ ${place}`;
+        //js데이터를 body에 보여준다 
+    })
 }
 
 function saveCoords(coordsObj) {
@@ -38,8 +48,9 @@ function loadCoords() {
         // localStorage에 좌표값이 저장되어있지않다면
         askForCoords(); // 좌표값을 물어본다
     } else { 
-        //  좌표값이 있다면,
-        getWeather();
+        //  좌표값이 있다면, 날씨를 가져온다
+        const parseCoords = JSON.parse(loadedCoords); // localStorage은 striong 으로 저장되기때문에 json객체로 변환시켜준다
+        getWeather(parseCoords.latitude, parseCoords.longitude);
     }
 }
 
