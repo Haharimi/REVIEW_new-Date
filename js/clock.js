@@ -13,7 +13,7 @@ function getTime() {
         hours = hours - 12;
     }
         
-    clockTitle.innerText = `${hours < 10 ? `0${hours}` : hours } : ${minutes < 10 ? `0${minutes}` : minutes} : ${seconds < 10 ? `0${seconds}` : seconds}`;
+    clockTitle.innerText = `${hours < 10 ? `0${hours}` : hours }:${minutes < 10 ? `0${minutes}` : minutes}:${seconds < 10 ? `0${seconds}` : seconds}`;
     //시간이 10보다 작으면 시간 앞에 0을 붙히도록 삼항연산자를 이용하여 표현 
     
 }
