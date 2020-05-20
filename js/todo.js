@@ -3,9 +3,15 @@ const toDoForm = document.querySelector(".js-toDoForm"),
     toDoList = document.querySelector(".js-toDoList"),
     resetBtn = document.querySelector("button");
 
-const TODOS_LS = 'toDos';
+const TODOS_LS = 'toDos',
+    CHECKED_TEXT = 'checked';
 
 let toDos = [];
+
+function text_decorate () {
+    console.log("hi");
+    liText.classList.add(CHECKED_TEXT);
+}
 
 function deleteList(event) {
     const ul = document.querySelector("ul");
@@ -24,8 +30,8 @@ function saveToDos() {
 function paintToDo(text) {
     const li = document.createElement("li");
     const checkBox = document.createElement("input");
-    checkBox.setAttribute("type", "checkbox");
     const span = document.createElement("span");
+    checkBox.setAttribute("type", "checkbox");
     const newId = toDos.length + 1;
     span.innerText = text; 
     li.appendChild(checkBox); // li에 checkBox 자식요소로 추가 
@@ -38,6 +44,15 @@ function paintToDo(text) {
     };
     toDos.push(toDoObj); // toDOs배열에 toDoObj 추가 
     saveToDos(); // toDos 저장 
+    checkBox.onclick = function() {
+        if (checkBox.checked === true) {
+            //체크박스가 체크 활성화일때는 checked 클래스 추가 
+            span.classList.add(CHECKED_TEXT); 
+        } else {
+            //체크박스 체크 비활성화일때는 checked 클래스 삭제 
+            span.classList.remove(CHECKED_TEXT);
+        }
+    };
 }
 
 function handleSubmit(event) {
