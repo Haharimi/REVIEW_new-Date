@@ -1,9 +1,11 @@
 const gtForm = document.querySelector(".js-nameForm"),
     gtInput = gtForm.querySelector("input"),
-    greeting = document.querySelector(".js-greeting");
+    greeting = document.querySelector(".js-greeting"),
+    tdForm = document.querySelector(".toDoForm");
 
 const USER_LS = "currentUser",
-    SHOWING_CN = "showing" // .showing {display : block;}
+    SHOWING_CN = "showing", // .showing {display : block;}
+    HIDING_CN = "hiding"
 
 function saveName(text) {
     localStorage.setItem(USER_LS, text); // localStorage에 user 저장 
@@ -22,8 +24,9 @@ function askForName() {
 }
 
 function paintGreeting(text) {
+    tdForm.classList.add(SHOWING_CN); // to-do 입력창 form 보여주기위해 SHOWING_CN 클래스 추가 
     gtForm.classList.remove(SHOWING_CN); // form을 삭제하기위해, SHOWING_CN 삭제 
-    greeting.classList.add(SHOWING_CN); // greeting을 보여주기 위해 SHOWING_CN 클래스 추가 
+    greeting.classList.add(SHOWING_CN); // greeting을 보여주기 위해 SHOWING_CN 클래스 추가
     greeting.innerText = `Hello, ${text}!`; // greeting에 text 추가 
 }
 

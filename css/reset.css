@@ -11,5 +11,5 @@ h1, h2, h3, h4, h5, h6 {font-size: 13px; color:#222; font-weight: normal;}
 body, input, textarea, select, button, table {font-family:'Noto Sans KR', AppleSDGothicNeo-Regular,'Malgun Gothic','맑은 고딕',dotum,'돋움',sans-serif; color: #222; font-size: 13px; line-height: 1.5;}
 
 /* 버튼, input 초기화 */
-button, input {border: 0;}
+button, input {border: 1;}
 input, button:focus {outline: none;}
