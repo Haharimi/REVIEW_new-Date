@@ -14,11 +14,17 @@ function text_decorate () {
 }
 
 function deleteList(event) {
-    const ul = document.querySelector("ul");
-    ul.innerHTML = ''; // HTML상에서 리스트 삭제 
-    toDos = []; // localStorage의 toDos를 빈배열로 reset, localStorage 상에서 리스트 삭제
-    saveToDos(); // 초기화된 toDos 저장 
-    alert('to-do 리스트를 초기화하시겠습니까?');
+    if (confirm("정말 리스트를 초기화하시겠습니까?") === true) { // confirm으로 취소, 확인 동작 나누기 
+        //확인 버튼 클릭 시 동작 
+        const ul = document.querySelector("ul");
+        ul.innerHTML = ''; // HTML상에서 리스트 삭제 
+        toDos = []; // localStorage의 toDos를 빈배열로 reset, localStorage 상에서 리스트 삭제
+        saveToDos(); // 초기화된 toDos 저장 
+        alert("리스트가 초기화되었습니다.");
+    } else{
+        //취소 버튼 클릭 시 동작 
+        return;
+    }
 }
 
 function saveToDos() {

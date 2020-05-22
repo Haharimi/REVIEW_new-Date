@@ -9,7 +9,7 @@ body {
 
 .nameInput,
 .toDoInput {
-    width: 200px;
-    height: 50px;
-    font-size: 16px;
+    width: 180px;
+    height: 24px;
+    font-size: 12px;
 }
