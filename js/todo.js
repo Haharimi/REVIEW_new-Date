@@ -34,13 +34,20 @@ function saveToDos() {
 }
 
 function paintToDo(text) {
-    const li = document.createElement("li");
-    const checkBox = document.createElement("input");
-    const span = document.createElement("span");
-    checkBox.setAttribute("type", "checkbox");
-    const newId = toDos.length + 1;
-    span.innerText = text; 
+    const li = document.createElement("li"); //li 생성
+    const checkBox = document.createElement("input"); //input 생성
+    const span = document.createElement("span"); //span태그 생성
+    const newId = toDos.length + 1; // 각 Todolist 마다 고유의 숫자를 부여하기위해
+    checkBox.setAttribute("type", "checkbox"); //input의 속성을 체크박스로 선택 
+    const cbId = `cb${newId}`;
+    checkBox.id = cbId; // 체크박스에 id 추가 
+    checkBox.className = "cb_style"; // 체크박스에 class 추가 
+    const label = document.createElement("label"); // 체크박스 디자인을 위해 label 연결
+    label.setAttribute("for", `cb${newId}`); // label 태그에 for 속성 추가, 연결을 위해 체크박스 id값과 동일하게 설정 
+    label.innerHTML = "label";
+    span.innerText = text; // span태그에 할일내용 넣기 
     li.appendChild(checkBox); // li에 checkBox 자식요소로 추가 
+    li.appendChild(label); // li에 label 자식요소로 추가 
     li.appendChild(span); // li에 span 자식요소로 추가 
     li.id = newId; //li에 id 추가하기 
     toDoList.appendChild(li); //toDoList에 li 자식요소로 추가 
