@@ -42,3 +42,9 @@ input.cb_style:checked + label { /* 체크박스 체크되었을 때 디자인 *
     background-position: center;
     background-size: 60%;
 }
+
+.checked { /* 체크박스 활성화 시 텍스트 효과 */
+    text-decoration: line-through;
+    text-decoration-color: #bdbdbd;
+    color: #bdbdbd;
+}

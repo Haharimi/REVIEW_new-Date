@@ -11,8 +11,3 @@
     display: none;
 }
 
-.checked {
-    text-decoration: line-through;
-    text-decoration-color: #bdbdbd;
-    color: #bdbdbd;
-}
