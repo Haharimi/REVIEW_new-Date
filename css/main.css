@@ -1,11 +1,82 @@
-body {
-    background-color: white;
+html, body {
+    margin: 0;
+    height: 100%;
+    
+}
+
+.wrap {
+    display: flex;
+    height: 100%;
+    flex-direction: row; /* 정렬 방향 - 수평 */
+    justify-content: center; 
+    align-items: center;
+}
+
+.outBox {
+    /* display: flex;
+    flex-direction: column;
+    justify-content: center; 
+    align-items: center; */
+    width: 600px;
+    height: 100%;
+    padding: 50px;
+    position: relative;
+    background-color:rgb(231, 240, 241);
+}
+
+/* 다크라이트모드 디자인 */
+.darkLightCheckBox {
+    position: absolute; /* relative -> outBox */
+    right: 80px;
+}
+
+/* 날짜 및 요일 디자인 */
+.date {
+    text-align: center;
+    margin-top: 40px;
+}
+.dateText1 {
+    font-size: 60px;
+    font-weight: 700;
+}
+
+.dateText2 {
+    font-size: 34px;
+    font-weight: 100;
+    margin-top: -17px;
+}
+
+/* 날씨 디자인 */
+.weather {
+    text-align: center;
+    font-size: 18px;
+    padding-top: 10px;
+    font-style: italic;
+    color: #616161;
+}
+
+/* 시계 디자인 */
+.clocks {
+    text-align: center;
+    position: relative;
+}
+
+.amPm_text {
+    position: absolute;
+    top: 40px;
+    left: 120px;
+    font-size: 18px;
+    float: left;
 }
 
 .clock_text {
-    font-size: 36px;
-    font-weight: bold;
+    display: inline-block;
+    font-size: 50px;
+    font-weight: 700;
+    margin-top: 10px;
 }
+
+
 
 .nameInput,
 .toDoInput {

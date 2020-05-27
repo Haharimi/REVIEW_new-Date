@@ -11,42 +11,51 @@
     <script src="https://kit.fontawesome.com/3244a18d75.js" crossorigin="anonymous"></script>
 </head>
 <body>
-    <div>
-        <input type="checkbox" class="darkLight_Cb" id="darkLight_Cb">
-        <label for="darkLight_Cb" class="label">
-            <i class="fas fa-moon"></i>
-            <i class="fas fa-sun"></i>
-            <div class="ball"></div>
-        </label>
-    </div>
+    <div class="wrap">
+        <div class="outBox">
+                <div class="darkLightCheckBox">
+                    <input type="checkbox" class="darkLight_Cb" id="darkLight_Cb">
+                    <label for="darkLight_Cb" class="label">
+                        <i class="fas fa-moon"></i>
+                        <i class="fas fa-sun"></i>
+                        <div class="ball"></div>
+                    </label>
+                </div>
+                <div class="js-date date">
+                    <div class="dateText1">요일</div>
+                    <div class="dateText2">2020.05.22</div>
+                </div>
+                <div class="js-weather weather"></div>
+                <div class="js-clock clocks">
+                    <div class="amPm_text">AM</div>
+                    <div class="clock_text">12:00:00</div>
+                </div>
+                
+                <form class="js-nameForm form">
+                    <input class="nameInput" type="text" placeholder="이름을 입력해주세요">
+                    <input type="submit" value="확인">
+                </form>            
+                <h4 class="js-greeting greetings"></h4>
+                <form class="js-toDoForm toDoForm">
+                    <input class="toDoInput" type="text" placeholder="오늘의 할일을 작성해주세요">
+                    <input type="submit" value="➕">
+                </form>
+            
+          
+                <ul class="js-toDoList toDoList"></ul>  
+          
+       
+                <button class="js-resetBtn resetBtn">reset</button>
+        
+        </div> 
+    </div>  
 
-    <div>현재 시간</div>
-    <div class="js-clock">
-        <h2 class="amPm_text">AM</h2>
-        <h1 class="clock_text">12:00:00<</h1>
-    </div>
-    <div class="js-date">
-        2020년 5월 14일 목요일
-    </div>
-    <div class="js-weather"></div>
-    <form class="js-nameForm form">
-        <input class="nameInput" type="text" placeholder="이름을 입력해주세요">
-        <input type="submit" value="확인">
-    </form> 
-    <h4 class="js-greeting greetings"></h4>
-    <form class="js-toDoForm toDoForm">
-        <input class="toDoInput" type="text" placeholder="오늘의 할일을 작성해주세요">
-        <input type="submit" value="➕">
-    </form>    
-    <ul class="js-toDoList toDoList"></ul>    
-    <button class="js-resetBtn resetBtn">reset</button>
 
-    <script src="js/clock.js"></script>
-    <script src="js/date.js"></script>
-    <script src="js/weather.js"></script>
-    <script src="js/greeting.js"></script>
-    <script src="js/todo.js"></script>
-    <script src="js/darkLight.js"></script>
-
+        <script src="js/clock.js"></script>
+        <script src="js/date.js"></script>
+        <script src="js/weather.js"></script>
+        <script src="js/greeting.js"></script>
+        <script src="js/todo.js"></script>
+        <script src="js/darkLight.js"></script>
 </body>
 </html>

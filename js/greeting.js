@@ -1,6 +1,7 @@
 const gtForm = document.querySelector(".js-nameForm"),
     gtInput = gtForm.querySelector("input"),
     greeting = document.querySelector(".js-greeting"),
+    RESET_BTN = document.querySelector(".js-resetBtn"),
     tdForm = document.querySelector(".toDoForm");
 
 const USER_LS = "currentUser",
@@ -9,6 +10,7 @@ const USER_LS = "currentUser",
 
 function hideToDoForm () {
     tdForm.classList.add(HIDING_CN); // toDoForm 삭제
+    RESET_BTN.classList.add(HIDING_CN); // reset 버튼 삭제 
 }
 
 function saveName(text) {
@@ -21,6 +23,8 @@ function handleSubmit(event) {
     paintGreeting(currentValue); // 현재의 value값으로 인사하기
     saveName(currentValue); // localStorage에 user 저장
     tdForm.classList.remove(HIDING_CN); // toDoForm를 다시 보여주기위해 hiding 클래스 삭제
+    RESET_BTN.classList.remove(HIDING_CN); // reset버튼 showing
+
 
 }
 
@@ -32,7 +36,7 @@ function askForName() {
 function paintGreeting(text) {
     gtForm.classList.remove(SHOWING_CN); // form을 삭제하기위해, SHOWING_CN 삭제 
     greeting.classList.add(SHOWING_CN); // greeting을 보여주기 위해 SHOWING_CN 클래스 추가
-    greeting.innerText = `Hello, ${text}!`; // greeting에 text 추가 
+    greeting.innerText = `반갑습니다, ${text}님!`; // greeting에 text 추가 
 }
 
 function loadName() {

@@ -1,4 +1,6 @@
-const dateTitle = document.querySelector(".js-date");
+const dateTitle = document.querySelector(".js-date"),
+    DATETEXT1 = dateTitle.querySelector(".dateText1"),
+    DATETEXT2 = dateTitle.querySelector(".dateText2");
 
 function getDay() {
     const today = new Date();
@@ -8,7 +10,8 @@ function getDay() {
     const week = ['일요일', '월요일', '화요일', '수요일', '목요일', '금요일', '토요일'];
     const days = week[today.getDay()]; // 요일 가져오기 
 
-    dateTitle.innerText = `${years}년 ${months}월 ${dates}일 ${days}`
+    DATETEXT1.innerText = `${days}`;
+    DATETEXT2.innerText = `${years}.${months}.${dates}`;
 }
 
 function init() {
