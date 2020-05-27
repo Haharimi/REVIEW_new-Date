@@ -28,7 +28,7 @@ input.cb_style + label { /* + 는 자식요소를 나타낸다 */
     border-radius: 50%;
     border: 1px solid #bdbdbd;
     cursor: pointer;
-
+    background-color: #fff;
     
     font-size: 1px;
     letter-spacing: -1px;
@@ -47,4 +47,14 @@ input.cb_style:checked + label { /* 체크박스 체크되었을 때 디자인 *
     text-decoration: line-through;
     text-decoration-color: #bdbdbd;
     color: #bdbdbd;
+}
+
+/* 리셋버튼 */
+.resetBtn {
+    background-color: #C73737;
+    color: white;
+    text-align: center;
+    width: 50px; height: 20px;
+    margin: 10px 0 0 10px;
+    border-radius: 10px;
 }
