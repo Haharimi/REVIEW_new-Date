@@ -1,7 +1,7 @@
 html, body {
     margin: 0;
     height: 100%;
-    
+    background: lightgray;
 }
 
 .wrap {
@@ -21,7 +21,7 @@ html, body {
     height: 100%;
     padding: 50px;
     position: relative;
-    background-color:rgb(231, 240, 241);
+    background: white;
 }
 
 /* 다크라이트모드 디자인 */
@@ -76,14 +76,64 @@ html, body {
     margin-top: 10px;
 }
 
-
-
+/* input box 디자인 */
+/* 1.전체적인 Input 공통 디자인 */
+input {color: #d3d3d3;}
+input::placeholder {color: #d3d3d3; }
 .nameInput,
 .toDoInput {
-    width: 180px;
-    height: 24px;
-    font-size: 12px;
+    width: 300px;
+    height: 44px;
+    font-size: 20px;
+    border-radius: 15px;
+    background-color: #fff;
+    border: 1.5px solid #d3d3d3;
+    padding-left: 20px;
 }
+
+/* 2.nameInput 디자인 */
+.nameForm {position: relative;}
+.nameInput {
+    position: absolute;
+    top: 20px; left: 90px;
+}
+.nameForm .nameInputBtn {
+    position: absolute;
+    top: 28px; right: 128px;
+    background-color: #fff;
+}
+.nameInputBtn[type="submit"] {
+    font-family: FontAwesome;
+    font-size: 20px;
+    cursor: pointer;
+    
+}
+
+/* 3.toDoInput 디자인 */
+.toDoForm {position: relative;}
+.toDoForm .toDoInput {
+    position: absolute;
+    top: 35px; right: 105px;
+    
+}
+.toDoForm .toDoInputBtn {
+    position: absolute;
+    top: 39px; right: 128px;
+    background-color: #fff;
+}
+.toDoInputBtn[type="submit"] {
+    font-family: FontAwesome;
+    font-size: 24px;
+    cursor: pointer;
+}
+
+/* greeting 디자인 */
+.greetings {
+    text-align: center;
+    font-size: 14px;
+}
+
+
 
 /* checkBox Design */
 input.cb_style {

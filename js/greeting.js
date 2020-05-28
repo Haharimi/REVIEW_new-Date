@@ -23,6 +23,7 @@ function handleSubmit(event) {
     paintGreeting(currentValue); // 현재의 value값으로 인사하기
     saveName(currentValue); // localStorage에 user 저장
     tdForm.classList.remove(HIDING_CN); // toDoForm를 다시 보여주기위해 hiding 클래스 삭제
+    gtForm.classList.add(HIDING_CN);// nameInput 숨기기
     RESET_BTN.classList.remove(HIDING_CN); // reset버튼 showing
 
 
@@ -34,7 +35,7 @@ function askForName() {
 }
 
 function paintGreeting(text) {
-    gtForm.classList.remove(SHOWING_CN); // form을 삭제하기위해, SHOWING_CN 삭제 
+    gtForm.classList.add(HIDING_CN); // form을 삭제하기위해, SHOWING_CN 삭제 
     greeting.classList.add(SHOWING_CN); // greeting을 보여주기 위해 SHOWING_CN 클래스 추가
     greeting.innerText = `반갑습니다, ${text}님!`; // greeting에 text 추가 
 }
