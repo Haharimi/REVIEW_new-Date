@@ -19,7 +19,7 @@ html, body {
     align-items: center; */
     width: 600px;
     height: 100%;
-    padding: 50px;
+    padding: 30px;
     position: relative;
     background: white;
 }
@@ -27,7 +27,7 @@ html, body {
 /* 다크라이트모드 디자인 */
 .darkLightCheckBox {
     position: absolute; /* relative -> outBox */
-    right: 80px;
+    right: 40px;
 }
 
 /* 날짜 및 요일 디자인 */
@@ -50,7 +50,6 @@ html, body {
 .weather {
     text-align: center;
     font-size: 18px;
-    padding-top: 10px;
     font-style: italic;
     color: #616161;
 }
@@ -83,11 +82,11 @@ input::placeholder {color: #d3d3d3; }
 .nameInput,
 .toDoInput {
     width: 300px;
-    height: 44px;
-    font-size: 20px;
+    height: 38px;
+    font-size: 16px;
     border-radius: 15px;
     background-color: #fff;
-    border: 1.5px solid #d3d3d3;
+    border: 1px solid #d3d3d3;
     padding-left: 20px;
 }
 
@@ -99,12 +98,12 @@ input::placeholder {color: #d3d3d3; }
 }
 .nameForm .nameInputBtn {
     position: absolute;
-    top: 28px; right: 128px;
+    top: 39px; right: 128px;
     background-color: #fff;
 }
 .nameInputBtn[type="submit"] {
     font-family: FontAwesome;
-    font-size: 20px;
+    font-size: 16px;
     cursor: pointer;
     
 }
@@ -113,17 +112,17 @@ input::placeholder {color: #d3d3d3; }
 .toDoForm {position: relative;}
 .toDoForm .toDoInput {
     position: absolute;
-    top: 35px; right: 105px;
+    top: 25px; right: 120px;
     
 }
 .toDoForm .toDoInputBtn {
     position: absolute;
-    top: 39px; right: 128px;
+    top: 28px; right: 138px;
     background-color: #fff;
 }
 .toDoInputBtn[type="submit"] {
     font-family: FontAwesome;
-    font-size: 24px;
+    font-size: 22px;
     cursor: pointer;
 }
 
@@ -131,6 +130,16 @@ input::placeholder {color: #d3d3d3; }
 .greetings {
     text-align: center;
     font-size: 14px;
+}
+
+/* todolist li 디자인 */
+.toDoList {
+    position: absolute;
+    top: 440px; left: 170px;
+}
+.toDoList span {
+    display: inline-block;
+    font-size: 16px;
 }
 
 
@@ -142,15 +151,19 @@ input.cb_style {
 
 input.cb_style + label { /* + 는 자식요소를 나타낸다 */
     display: inline-block;
-    width: 24px;    
-    height: 24px;
-    margin: 5px 8px 5px 5px;
+    position: relative;
+    top: -4px;
+
+    width: 20px;    
+    height: 20px;
+    margin: 8px 8px 5px 5px;
     vertical-align: middle;
     border-radius: 50%;
     border: 1px solid #bdbdbd;
     cursor: pointer;
     background-color: #fff;
     
+    /* 라벨 숨기기 */
     font-size: 1px;
     letter-spacing: -1px;
     text-indent: -3000px;
@@ -170,12 +183,15 @@ input.cb_style:checked + label { /* 체크박스 체크되었을 때 디자인 *
     color: #bdbdbd;
 }
 
-/* 리셋버튼 */
+/* 리셋버튼 디자인 */
 .resetBtn {
+    width: 70px; height: 25px;
+    position: absolute;
+    top: 794px; right: 40px;
     background-color: #C73737;
     color: white;
     text-align: center;
-    width: 50px; height: 20px;
     margin: 10px 0 0 10px;
     border-radius: 10px;
+    font-size: 15px;
 }
