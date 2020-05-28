@@ -1,7 +1,7 @@
 html, body {
     margin: 0;
     height: 100%;
-    background: lightgray;
+    /* background: lightgray; */
 }
 
 .wrap {
@@ -21,7 +21,7 @@ html, body {
     height: 100%;
     padding: 30px;
     position: relative;
-    background: white;
+    background: #eeeeee;
 }
 
 /* 다크라이트모드 디자인 */
@@ -62,7 +62,7 @@ html, body {
 
 .amPm_text {
     position: absolute;
-    top: 40px;
+    top: 48px;
     left: 120px;
     font-size: 18px;
     float: left;
@@ -70,9 +70,8 @@ html, body {
 
 .clock_text {
     display: inline-block;
-    font-size: 50px;
+    font-size: 66px;
     font-weight: 700;
-    margin-top: 10px;
 }
 
 /* input box 디자인 */
@@ -94,11 +93,11 @@ input::placeholder {color: #d3d3d3; }
 .nameForm {position: relative;}
 .nameInput {
     position: absolute;
-    top: 20px; left: 90px;
+    top: 47px; left: 107px;
 }
 .nameForm .nameInputBtn {
     position: absolute;
-    top: 39px; right: 128px;
+    top: 54px; right: 150px;
     background-color: #fff;
 }
 .nameInputBtn[type="submit"] {
@@ -112,12 +111,12 @@ input::placeholder {color: #d3d3d3; }
 .toDoForm {position: relative;}
 .toDoForm .toDoInput {
     position: absolute;
-    top: 25px; right: 120px;
+    top: 15px; right: 120px;
     
 }
 .toDoForm .toDoInputBtn {
     position: absolute;
-    top: 28px; right: 138px;
+    top: 18px; right: 138px;
     background-color: #fff;
 }
 .toDoInputBtn[type="submit"] {
@@ -187,8 +186,8 @@ input.cb_style:checked + label { /* 체크박스 체크되었을 때 디자인 *
 .resetBtn {
     width: 70px; height: 25px;
     position: absolute;
-    top: 794px; right: 40px;
-    background-color: #C73737;
+    top: 784px; right: 40px;
+    background-color: #FF6D00;
     color: white;
     text-align: center;
     margin: 10px 0 0 10px;

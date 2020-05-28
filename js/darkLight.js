@@ -1,7 +1,8 @@
 const darkLight_cb = document.querySelector(".darkLight_Cb");
+const OUTBOX = document.querySelector(".outBox");
 
 function changeHandler () {
-    document.body.classList.toggle('dark');
+    OUTBOX.classList.toggle('darkMode');
     
 }
 
