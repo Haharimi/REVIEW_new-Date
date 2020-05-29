@@ -8,7 +8,7 @@ dl, ul, li, ol, menu {list-style: none;}
 h1, h2, h3, h4, h5, h6 {font-size: 12px; font-weight: normal;}
 
 /* 폰트 초기화 */
-body, input, textarea, select, button, table {font-family:'Noto Sans KR', AppleSDGothicNeo-Regular,'Malgun Gothic','맑은 고딕',dotum,'돋움',sans-serif; color: #222; font-size: 12px; line-height: 1.5;}
+body, input, textarea, select, button, table {font-family:'Noto Sans KR', AppleSDGothicNeo-Regular,'Malgun Gothic','맑은 고딕',dotum,'돋움',sans-serif; color: #424242; font-size: 12px; line-height: 1.5;}
 
 /* 버튼, input 초기화 */
 button, input {border: 0;}
