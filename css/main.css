@@ -205,4 +205,3 @@ input.cb_style:checked + label { /* 체크박스 체크되었을 때 디자인 *
     cursor: pointer;
 }
 
-.liDeleteBtn[type="button"].click
