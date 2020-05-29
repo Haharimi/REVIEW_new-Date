@@ -27,6 +27,20 @@ function deleteList(event) {
     }
 }
 
+function deleteToDoList (event) {
+    const btn = event.target; 
+    const li = btn.parentNode; // 삭제할 li, console.dir(btn)
+    toDoList.removeChild(li);
+
+    const cleanToDos = toDos.filter(function (toDo) {
+        return toDo.id !== parseInt(li.id);
+        //toDos li의 id와 삭제된 li의 id값이 같지 않는 것만 반환하는 filter 함수실행
+        //li.id가 문자열이기때문에 숫자로 변환해주는 parseint실행
+    });
+    toDos = cleanToDos;
+    saveToDos();
+}
+
 function saveToDos() {
     localStorage.setItem(TODOS_LS, JSON.stringify(toDos)); 
     // localStorage에 key값은 todos, value값에 toDos 배열을 넣어준다
@@ -54,10 +68,8 @@ function paintToDo(text) {
     liDelBtn.setAttribute("value", "clear");
     liDelBtn.id = newId;
     liDelBtn.className = "liDeleteBtn";
-    liDelBtn.click = function () {
-        span.classList.add(CHECKED_TEXT); 
-    }
     li.appendChild(liDelBtn);
+    liDelBtn.addEventListener("click", deleteToDoList);
     
     
     
