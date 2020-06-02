@@ -6,7 +6,7 @@ html, body {
 
 .wrap {
     display: flex;
-    width: 600px;
+    width: 100%;
     margin: 0 auto;
     /* height: 100%; */
     flex-direction: row; /* 정렬 방향 - 수평 */
@@ -19,7 +19,7 @@ html, body {
     flex-direction: column;
     justify-content: center; 
     align-items: center; */
-    width: 100%;
+    width: 600px;
     height: 1000px;
     padding: 20px;
     position: relative;
@@ -59,13 +59,12 @@ html, body {
 /* 시계 디자인 */
 .clocks {
     text-align: center;
-    position: relative;
+    /* position: relative; */
 }
 
 .amPm_text {
     position: absolute;
-    top: 48px;
-    left: 125px;
+    top: 237px;right: 146px;
     font-size: 16px;
     float: left;
 }
@@ -95,40 +94,41 @@ input::placeholder {color: #9e9e9e; }
 .nameForm {position: relative;}
 .nameInput {
     position: absolute;
-    top: 47px; right: 130px;
+    top: 47px; right: 142px;
 }
 .nameForm .nameInputBtn {
     position: absolute;
-    top: 54px; right: 150px;
+    top: 54px; right: 15px;
     background-color: #fff;
 }
 .nameInputBtn[type="submit"] {
     font-family: FontAwesome;
     font-size: 16px;
     cursor: pointer;
-    
+    background: none;    
 }
 
 /* 3.toDoInput 디자인 */
 .toDoForm {position: relative;}
 .toDoForm .toDoInput {
     position: absolute;
-    top: 15px; right: 130px;
+    top: 15px; right: 150px;
     
 }
 .toDoForm .toDoInputBtn {
     position: absolute;
-    top: 18px; right: 147px;
+    top: 18px; right: 164px;
     background-color: #fff;
 }
 .toDoInputBtn[type="submit"] {
     font-family: FontAwesome;
     font-size: 22px;
     cursor: pointer;
+    background: none;
 }
 .toDoInputBtn[type="submit"]:hover {
     /* 마우스오버 효과 */
-    color: red;
+    color: #FF6D00;
     transition: all 0.2s ease-out;
 }
 
@@ -152,6 +152,7 @@ input::placeholder {color: #9e9e9e; }
 .liDeleteBtn {
     font-size: 18px;
     margin-left: 8px;
+    background: none;
 } 
 
 
@@ -199,13 +200,41 @@ input.cb_style:checked + label { /* 체크박스 체크되었을 때 디자인 *
 .resetBtn {
     width: 48px; height: 20px;
     position: absolute;
-    top: 348px; right: 80px;
+    top: 348px; right: 90px;
     background-color: #FF6D00;
     color: white;
     text-align: center;
     margin: 10px 0 0 10px;
     border-radius: 5px;
-    font-size: 13px;
+    font-size: 14px;
     cursor: pointer;
 }
 
+/* 미디어 쿼리 */
+
+@media (max-width: 480px) {
+    .dateText1 {font-size: 52px;}
+    .clock_text {font-size: 48px;}
+    .amPm_text {top: 208px; right: 119px; font-size: 14px;}
+    .nameInput, .toDoInput { width: 264px; height: 37px; font-size: 15px;}
+    .nameInput {right: 85px;}
+    .nameForm .nameInputBtn {right: 104px;}
+    .toDoForm .toDoInput {top: 15px; right: 84px;}
+    .toDoForm .toDoInputBtn {right: 105px;}
+    .resetBtn {top: 344px; right: 105px;}
+    .toDoList  {top: 380px; left: 130px;}
+}
+@media (max-width: 375px) {
+    .dateText1 {font-size: 48px; margin-top: 30px;}
+    .dateText2 {font-size: 30px;}
+    .weather {font-size: 15px;}
+    .clock_text {font-size: 40px;}
+    .amPm_text {top: 198px; right: 88px;}
+    .greetings {margin-top: 0;}
+    .nameInput, .toDoInput { width: 218px; height: 30px; font-size: 14px;}
+    .nameInput {right: 58px;}
+    .nameForm .nameInputBtn {right: 82px; top: 51px;}
+    .toDoForm .toDoInput {right: 60px;}
+    .toDoForm .toDoInputBtn {right: 76px; top: 17px; font-size: 18px;}
+    .resetBtn {top: 334px;right: 83px;}
+}
