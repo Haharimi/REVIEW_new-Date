@@ -65,14 +65,11 @@ function paintToDo(text) {
     const ul = document.querySelector("ul");
     const liDelBtn = document.createElement("input");
     liDelBtn.setAttribute("type", "button");
-    liDelBtn.setAttribute("value", "clear");
-    
+    liDelBtn.setAttribute("value", "✕");
     liDelBtn.id = newId;
     liDelBtn.className = "liDeleteBtn";
     liDelBtn.addEventListener("click", deleteToDoList);
     
-    
-
     li.appendChild(checkBox); // li에 checkBox 자식요소로 추가 
     li.appendChild(label); // li에 label 자식요소로 추가 
     li.appendChild(span); // li에 span 자식요소로 추가 
