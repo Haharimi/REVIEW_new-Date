@@ -213,7 +213,7 @@ input.cb_style:checked + label { /* 체크박스 체크되었을 때 디자인 *
 /* 미디어 쿼리 */
 
 @media (max-width: 480px) {
-    .outBox {height: 820px;}
+    .outBox {height: 740px;}
     .dateText1 {font-size: 52px;}
     .clock_text {font-size: 48px;}
     .amPm_text {top: 208px; right: 119px; font-size: 14px;}
@@ -225,8 +225,26 @@ input.cb_style:checked + label { /* 체크박스 체크되었을 때 디자인 *
     .resetBtn {top: 344px; right: 105px;}
     .toDoList  {top: 380px; left: 130px;}
 }
+
+@media (max-width: 420px) {
+    .date {margin-top: 30px;}
+    .dateText2 {font-size: 32px;}
+    .weather {font-size: 16px;}
+    .clock_text {font-size: 40px;}
+    .amPm_text{right: 106px;}
+    .greetings{margin-top: 0;}
+
+    .nameInput, .toDoInput {width: 252px; height: 30px; font-size: 16px;}
+    .nameInput {right: 64px;}
+    .nameForm .nameInputBtn {top: 50px; right: 85px;}
+    .toDoForm .toDoInput {right: 64px;}
+    .toDoForm .toDoInputBtn {right: 82px; top: 16px; font-size: 20px;}
+
+    .toDoList {left: 86px;}
+}
+
 @media (max-width: 375px) {
-    .outBox {height: 820px;}
+    .outBox {height: 680px;}
     .dateText1 {font-size: 48px; margin-top: 30px;}
     .dateText2 {font-size: 30px;}
     .weather {font-size: 15px;}
