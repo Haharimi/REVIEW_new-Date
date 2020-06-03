@@ -200,7 +200,7 @@ input.cb_style:checked + label { /* 체크박스 체크되었을 때 디자인 *
 .resetBtn {
     width: 48px; height: 20px;
     position: absolute;
-    top: 348px; right: 90px;
+    top: 338px; right: 90px;
     background-color: #FF6D00;
     color: white;
     text-align: center;
@@ -212,49 +212,43 @@ input.cb_style:checked + label { /* 체크박스 체크되었을 때 디자인 *
 
 /* 미디어 쿼리 */
 
-@media (max-width: 480px) {
-    .outBox {height: 740px;}
-    .dateText1 {font-size: 42px;}
-    .clock_text {font-size: 48px;}
-    .amPm_text {top: 208px; right: 119px; font-size: 14px;}
-    .nameInput, .toDoInput { width: 264px; height: 37px; font-size: 15px;}
-    .nameInput {right: 85px;}
-    .nameForm .nameInputBtn {right: 104px;}
-    .toDoForm .toDoInput {top: 15px; right: 84px;}
-    .toDoForm .toDoInputBtn {right: 105px;}
-    .resetBtn {top: 344px; right: 105px;}
-    .toDoList  {top: 370px; left: 130px;}
-}
+
 
 @media (max-width: 420px) {
     .date {margin-top: 30px;}
+    .dateText1 {font-size: 42px;}
     .dateText2 {font-size: 26px;}
     .weather {font-size: 16px;}
     .clock_text {font-size: 32px;}
-    .amPm_text{top: 182px; right: 108px; font-size: 12px;}
+    .amPm_text{top: 178px; right: 120px; font-size: 12px;}
     .greetings{margin-top: 0; font-size: 12px;}
 
-    .nameInput, .toDoInput {width: 252px; height: 30px; font-size: 16px;}
-    .nameInput {right: 64px;}
-    .nameForm .nameInputBtn {top: 50px; right: 85px;}
-    .toDoForm .toDoInput {right: 64px;}
-    .toDoForm .toDoInputBtn {right: 82px; top: 16px; font-size: 20px;}
+    .nameInput, .toDoInput {width: 240px; height: 32px; font-size: 16px;}
+    .nameInput {top: 32px; right: 70px;}
+    .nameForm .nameInputBtn {top: 36px; right: 87px;}
+    .toDoForm .toDoInput {right: 72px; top: 5px;}
+    .toDoForm .toDoInputBtn {right: 85px; top: 7px; font-size: 20px;}
+    .resetBtn {top: 282px; right: 93px;}
+    .toDoList {top: 308px; left: 95px;}
+    .toDoList span {font-size: 14px;}
+    .liDeleteBtn {font-size: 14px;}
+    input.cb_style + label {width: 18px; height: 18px;}
 
-    .toDoList {left: 86px;}
 }
 
 @media (max-width: 375px) {
     .outBox {height: 680px;}
-    .dateText1 {font-size: 48px; margin-top: 30px;}
-    .dateText2 {font-size: 30px;}
+    .dateText1 {font-size: 38px;}
+    .dateText2 {font-size: 24px;}
     .weather {font-size: 15px;}
-    .clock_text {font-size: 40px;}
-    .amPm_text {top: 198px; right: 88px;}
+    .clock_text {font-size: 32px;}
+    .amPm_text {top: 154px; right: 102px;}
     .greetings {margin-top: 0;}
-    .nameInput, .toDoInput { width: 218px; height: 30px; font-size: 14px;}
-    .nameInput {right: 58px;}
-    .nameForm .nameInputBtn {right: 82px; top: 51px;}
-    .toDoForm .toDoInput {right: 60px;}
-    .toDoForm .toDoInputBtn {right: 76px; top: 17px; font-size: 18px;}
-    .resetBtn {top: 334px;right: 83px;}
+    .nameInput, .toDoInput { width: 206px; height: 26px; font-size: 14px;}
+    .nameInput {right: 66px;}
+    .nameForm .nameInputBtn {right: 80px; top: 34px; font-size: 15px;}
+    .toDoForm .toDoInput {right: 68px;}
+    .toDoForm .toDoInputBtn {right: 78px; top: 7px; font-size: 16px;}
+    .toDoList {top: 288px; left: 96px;}
+    .resetBtn {top: 264px;right: 90px; width: 44px; height: 18px; font-size: 12px;}
 }
